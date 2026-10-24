@@ -1,0 +1,22 @@
+{
+  "folder_prefix": "# ",
+  "allow_new_subcategories": true,
+  "categories": [
+    {
+      "path": "Fiction",
+      "description": "Novels, short stories, and literary fiction."
+    },
+    {
+      "path": "Science/Biology",
+      "description": "General biology and life sciences."
+    },
+    {
+      "path": "Reference/Dictionaries",
+      "description": "Dictionaries, glossaries, and quick reference."
+    },
+    {
+      "path": "Cooking",
+      "description": "Cookbooks and culinary techniques."
+    }
+  ]
+}

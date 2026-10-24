@@ -1,0 +1,44 @@
+[project]
+name = "auto-library-manager"
+version = "1.0.0"
+description = "Auto Library Manager — sort ebooks into # Category folders with a local LLM (GUI + CLI)"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Auto Library Manager contributors" }]
+keywords = ["ebooks", "library", "llm", "categorization", "local-ai"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Environment :: Win32 (MS Windows)",
+  "Environment :: MacOS X",
+  "Environment :: X11 Applications",
+  "Intended Audience :: End Users/Desktop",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Utilities",
+]
+requires-python = ">=3.10"
+dependencies = [
+  "pymupdf>=1.24.0",
+  "requests>=2.31.0",
+  "ebooklib>=0.18",
+  "beautifulsoup4>=4.12.0",
+  "rarfile>=4.0",
+]
+
+[project.scripts]
+library-sort = "library_manager.cli:main"
+library-sort-gui = "library_manager.gui:main"
+library-category-inventory = "library_manager.inventory_cli:main"
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
